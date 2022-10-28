@@ -2,10 +2,12 @@ public class Responsable extends Persona {
     protected String nroCredencial;
     protected Double sueldo;
 
-    public Responsable(String nroCredencial, Double sueldo) {
+    public Responsable(String nombre, String primerApellido, String segundoApellido, String direccion, String nroCredencial, Double sueldo) {
+        super(nombre, primerApellido, segundoApellido, direccion);
         this.nroCredencial = nroCredencial;
         this.sueldo = sueldo;
     }
+
 
     public String getNroCredencial() {
         return nroCredencial;

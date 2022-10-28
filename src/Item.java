@@ -1,16 +1,12 @@
-import java.util.Date;
 
 public class Item extends Bienes{
     private String cantidadItems;
 
-    public Item(int nroOrden, String nit, Date fechaOrden, Double nomtoTotal, Date fechaEntrega, String cantidadItems) {
-        super(nroOrden, nit, fechaOrden, nomtoTotal, fechaEntrega);
-        this.cantidadItems = cantidadItems;
+    public Item(int codigoBien, String nombreBien, int cantidadSolicitud, int unidadMedida, Double valorUni, Double valorTotal, String cantidadItems) {
+        super(codigoBien, nombreBien, cantidadSolicitud, unidadMedida, valorUni, valorTotal);
+        this.setCantidadItems(cantidadItems);
     }
 
-    public Item(String cantidadItems) {
-        this.cantidadItems = cantidadItems;
-    }
 
     public String getCantidadItems() {
         return cantidadItems;
@@ -23,11 +19,12 @@ public class Item extends Bienes{
     @Override
     public String toString() {
         return "Item{" +
-                "nroOrden=" + nroOrden +
-                ", nit='" + nit + '\'' +
-                ", fechaOrden=" + fechaOrden +
-                ", nomtoTotal=" + nomtoTotal +
-                ", fechaEntrega=" + fechaEntrega +
+                "codigoBien=" + codigoBien +
+                ", nombreBien='" + nombreBien + '\'' +
+                ", cantidadSolicitud=" + cantidadSolicitud +
+                ", unidadMedida=" + unidadMedida +
+                ", valorUni=" + valorUni +
+                ", valorTotal=" + valorTotal +
                 ", cantidadItems='" + cantidadItems + '\'' +
                 '}';
     }
